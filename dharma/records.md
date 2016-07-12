@@ -1,12 +1,12 @@
 ## My Dharma practice of July 2016 
 ### Medicine Buddha Mantra 药师佛心咒 (2016/7/7 - 2016/7/26) fulfill `111,113`
 
-Date | Name1 | Count1 | Name2 | Count2
---- | --- | --- | --- | ---
-Jul 7 | 药师佛心咒 | 300
-Jul 8 | 药师佛心咒 | 550 | 大头 | 10
-Jul 9 | 药师佛心咒 | 0 | 大头 | 0
-Jul 10 | 药师佛心咒 | 550  | 大头 | 0
+ | Date | Name1 | Count1 | Name2 | Count2
+--- | --- | --- | --- | --- | ---
+1| Jul 7 | 药师佛心咒 | 300
+2| Jul 8 | 药师佛心咒 | 550 | 大头 | 10
+3| Jul 9 | 药师佛心咒 | 0 | 大头 | 0
+4| Jul 10 | 药师佛心咒 | 550  | 大头 | 0
     
 
 __`July 7 Th`__
