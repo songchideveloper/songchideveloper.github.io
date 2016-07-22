@@ -41,7 +41,7 @@ grunt.initConfig({
 ```
 
 
-#### define the __copy__, copy files from the `src` to the `dest`
+#### Define the __copy__, copy files from the `src` to the `dest`
 ```javascript
 grunt.initConfig({
   ...
@@ -86,6 +86,24 @@ grunt.initConfig({
 })
 ```
 
+We can move further, to change the `files` arrays property to obj key-value property, so that we don't have to specify the _src_ and _dest_. By default, the __key__ is the `dest` and the __value__ is the `src`.
+```javascript
+grunt.initConfig({
+  ...
+  
+  copy: {
+    dist: {
+      files: {
+        '<%= config.app %>/index.html': '<%= config.dist %>/index.html',
+        '<%= config.app %>/js/index.js': dest: '<%= config.dist %>/js/index.js'
+      }
+    }
+  },
+  
+  ...
+})
+```
+
 #### Define the __clean__ property, to clean up the specific files
 
 ```javascript
@@ -100,3 +118,18 @@ grunt.initConfig({
   
   ...
 })
+```
+It is tedious when you have to specify the exactly path to clean up the files, we can refactor this.
+`**` for all the folder and `*` for all the files.
+grunt.initConfig({
+  ...
+  
+  clean: {
+    dist: {
+      src: ['<%= config.dist %>/**/*']
+    }
+  },
+  
+  ...
+})
+```
