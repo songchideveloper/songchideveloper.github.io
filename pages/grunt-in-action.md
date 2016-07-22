@@ -120,7 +120,7 @@ grunt.initConfig({
 })
 ```
 It is tedious when you have to specify the exactly path to clean up the files, we can refactor this.
-`**` for all the folder and `*` for all the files.
+``` javascript
 grunt.initConfig({
   ...
   
@@ -133,3 +133,36 @@ grunt.initConfig({
   ...
 })
 ```
+If we want to only delete the files not the folder, then we can use `filter: 'isFile'`    
+``` javascript
+grunt.initConfig({
+  ...
+  
+  clean: {
+    dist: {
+      src: ['<%= config.dist %>/**/*'],
+      filter: 'isFile'
+    }
+  },
+  
+  ...
+})
+```
+Or we can write our own filter like below:   
+``` javascript
+grunt.initConfig({
+  ...
+  
+  clean: {
+    dist: {
+      src: ['<%= config.dist %>/**/*'],
+      filter: function (filepath) {
+          return (!grunt.file.isDir(filepath));
+      }
+    }
+  },
+  
+  ...
+})
+```
+
