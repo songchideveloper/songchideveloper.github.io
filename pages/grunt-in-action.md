@@ -23,7 +23,7 @@ var config = {
 }
 ```
 
-### Config the `initConfig()`
+#### Config the `initConfig()`
 Put all the init config in to the `initConfig()` as an obj:
 ```javascript
 grunt.initConfig({
@@ -31,7 +31,7 @@ grunt.initConfig({
 })
 ```
 
-### Assign the config path
+#### Assign the config path
 ```javascript
 grunt.initConfig({
   config: config,
@@ -41,7 +41,7 @@ grunt.initConfig({
 ```
 
 
-### define the __copy__, copy files from the `src` to the `dest`
+#### define the __copy__, copy files from the `src` to the `dest`
 ```javascript
 grunt.initConfig({
   ...
@@ -60,3 +60,43 @@ grunt.initConfig({
   ...
 })
 ```
+
+Here is a way to add another `files` array property to refactor the `copy` property for the convenience of multiple sets of src/dest:   
+```javascript
+grunt.initConfig({
+  ...
+  
+  copy: {
+    dist: {
+      files: [
+        {
+            src: '<%= config.app %>/index.html',
+            dest: '<%= config.dist %>/index.html'
+        },
+        {
+            src: '<%= config.app %>/js/index.js',
+            dest: '<%= config.dist %>/js/index.js'
+        }
+      ]
+        
+    }
+  },
+  
+  ...
+})
+```
+
+#### Define the __clean__ property, to clean up the specific files
+
+```javascript
+grunt.initConfig({
+  ...
+  
+  clean: {
+    dist: {
+      src: ['<%= config.dist %>/index.html', '<%= config.dist %>/js/index.js']
+    }
+  },
+  
+  ...
+})
