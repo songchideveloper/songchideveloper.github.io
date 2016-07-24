@@ -166,3 +166,28 @@ grunt.initConfig({
 })
 ```
 
+### Here is the way to use the `expand` property in the `files` object (we need the array format to represent the `files`).
+- `expand: true` to enable the expand.
+- `cwd` to specify the `src` prefix path
+- `ext` to modify the file extention when copied to the destination
+- `extDot:first` or `extDot:last` to specify which dot is the start point to modify the file extension.
+- `flatten:true` to flatten the sub-folders, just put the file to the path specified in the `dest`
+- `rename:function(dest, src){}` to rename the filename in copied to the destination.
+```javascript
+grunt.initConfig({
+  ...
+  
+  copy: {
+    dist: {
+      files: [
+        {
+          expend: true,
+          cwd: '<%=config.app%>/',
+        }
+      ]
+    }
+  },
+  
+  ...
+})
+```
