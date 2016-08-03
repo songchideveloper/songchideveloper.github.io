@@ -8,6 +8,8 @@
 4 (Fr)| Jul 29 |  0 | 7 | 0 | 0 | 0 | 0 | 0 | 0
 5 (Sat)| Jul 30 | 0  | 7 | 0 | 0 | 0 | 0 | 0 | 7
 6 (Sun)| Jul 31 |  4000 | 7 | 7 | 21 | 7 | 7 | 3 | 7
+7 (Mon)| Aug 1 |  500 | 21 | 7 | 21 | 7 | 7 | 3 | 7
+8 (Tue)| Aug 2 |  4300 | 7 | 7 | 21 | 7 | 7 | 3 | 7
 
 ## My Dharma practice of July 2016 
 ### Medicine Buddha Mantra 药师佛心咒 (2016/7/7 - 2016/7/26) fulfill `111,113`
